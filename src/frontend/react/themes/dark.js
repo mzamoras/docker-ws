@@ -12,7 +12,7 @@ export default function (style = 'light') {
         palette: {
             primary: red,
             secondary: blue,
-            type: style
+            type: 'dark'
         },
         typography: {
             useNextVariants: true
