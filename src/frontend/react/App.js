@@ -1,21 +1,22 @@
-import React, {Fragment, Component} from 'react';
+import React, {Component} from 'react';
 import * as Proptypes from 'prop-types';
-import Paper from '@material-ui/core/Paper';
-import AppBar from '@material-ui/core/AppBar';
+
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import {withStyles} from "@material-ui/core";
-import Fab from '@material-ui/core/Fab';
+
 import IconButton from '@material-ui/core/IconButton';
 import InvertColors from '@material-ui/icons/InvertColors';
 import InvertColorsOff from '@material-ui/icons/InvertColorsOff';
-import Favorite from '@material-ui/icons/Favorite';
+
 import Icon from '@material-ui/core/Icon';
 import Typography from '@material-ui/core/Typography';
 import ima from '../assets/images/gadgets-iphone-laptop-163143.jpg';
+import TagComponent from './components/homeScreen/tagComponent';
 
+import { Link } from 'react-router-dom'
 const localCss = theme => {
     return{
         base: {
@@ -64,15 +65,18 @@ const localCss = theme => {
             marginTop:-100,
             marginLeft: -5,
             zIndex:0,
-            '& > div':{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'baseline'
+            /*'& > div':{
                 margin: '3px 0',
-                border: '1px solid green',
+                //border: '1px solid green',
                 padding: 10,
                 borderRadius: '0 4px 4px 0',
                 '&:hover':{
                     paddingLeft:20,
                 }
-            }
+            }*/
             //border: '1px solid red',*/
         }
     }
@@ -108,6 +112,9 @@ class App extends Component{
                             <Typography variant="body1" gutterBottom>
                                 <b>Working Front End</b><br/>
                                 15+ years Using FrontEnd Technologies
+                                <Link to="/a">HERE A</Link>
+                                <Link to="/b">HERE B</Link>
+                                <Link to="/c">HERE C</Link>
                             </Typography>
 
                             <Typography variant="body1" gutterBottom>
@@ -119,10 +126,18 @@ class App extends Component{
                     </CardActionArea>
                 </Card>
                 <div className={this.props.classes.tagLabelsContainer}>
-                    <div>Experience</div>
-                    <div>Projects</div>
-                    <div>Technologies</div>
-                    <div>Technologies</div>
+                    <TagComponent>
+                        Experience
+                    </TagComponent>
+                    <TagComponent>
+                        Projects
+                    </TagComponent>
+                    <TagComponent>
+                        Technologies
+                    </TagComponent>
+                    <TagComponent>
+                        Demos
+                    </TagComponent>
                 </div>
                 <Typography className={this.props.classes.footerLabel}>
                     <span>
