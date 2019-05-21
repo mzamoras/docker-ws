@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTransition, animated } from 'react-spring';
 import { Switch } from 'react-router-dom'
-import {connect} from "react-redux";
 
 const AppRoutingSpring =(prp) => {
 
@@ -20,8 +19,4 @@ const AppRoutingSpring =(prp) => {
     ) )
 };
 
-const mapStateToProps = state => ({
-    location: state.router.location
-});
-
-export default connect(mapStateToProps)(AppRoutingSpring);
+export default AppRoutingSpring;

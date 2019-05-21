@@ -1,4 +1,5 @@
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import shared from './shared';
 import red from '@material-ui/core/colors/red';
 import blue from '@material-ui/core/colors/blue';
 
@@ -18,25 +19,7 @@ export default function (style = 'light') {
             useNextVariants: true
         },
         customs: {
-            fullPosAbs: {
-                top: 0,
-                bottom: 0,
-                right: 0,
-                left: 0,
-                position: 'absolute'
-            },
-            flexCenter: {
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                flexDirection: 'column'
-            },
-            flexRight: {
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                flexDirection: 'row'
-            }
+            ...shared()
         },
         overrides: {
             MuiInput: {
