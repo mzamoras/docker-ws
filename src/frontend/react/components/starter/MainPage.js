@@ -89,7 +89,8 @@ const MainPage = ( {classes, location} ) => {
     const expandableIconClass = classNames( classes.expandableIcon, {
         [classes.expandableIconOpen]: isOpen
     });
-    const RP = ReactPill
+    const RP = ()=> <ReactPill className={classes.pill}/>;
+    const SP = () => <SveltePill className={classes.pill}/>;
     return(
         <div className={classes.root}>
             <Card raised={false} className={classes.mainCard}>
@@ -128,8 +129,8 @@ const MainPage = ( {classes, location} ) => {
                             Pre-Configured for
                         </Typography>
                         <Typography paragraph component='ul'>
-                            <li>React latest versions <ReactPill className={classes.pill}/></li>
-                            <li>Svelte latest versions <SveltePill className={classes.pill}/></li>
+                            <li>React latest versions <RP/></li>
+                            <li>Svelte latest versions <SP/></li>
                             <li>Redux <BothPill className={classes.combinedPill}/></li>
                             <li>React Router</li>
                             <li>Material-UI</li>
