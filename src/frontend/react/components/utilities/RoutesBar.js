@@ -11,7 +11,8 @@ const localCss = {
         alignItems: 'center',
         justifyItems: 'center',
         width: '100%',
-        padding: '15px 35%'
+        padding: '15px 35%',
+        top: 25
     },
     linkWrapper:{
         padding: '0 5px',
