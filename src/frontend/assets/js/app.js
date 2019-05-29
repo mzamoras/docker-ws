@@ -1,9 +1,8 @@
 
-/*
-if(process.argv.indexOf('--svelte') > -1) {
-    console.log('YEAH');
-    process.exit(1);
+if(process.env.IS_SVELTE) {
+    import('./app-svelte');
+} else if(process.env.IS_VUE) {
+    import('./app-vue');
 } else{
     require('./app-react');
-}*/
-require('./app-svelte');
+}
