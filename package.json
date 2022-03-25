@@ -34,7 +34,7 @@
         "@material-ui/icons": "^3.0.2",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
-        "electron": "^5.0.2",
+        "electron": "^13.6.6",
         "history": "^4.9.0",
         "immutability-helper": "^3.0.0",
         "os": "^0.1.1",
